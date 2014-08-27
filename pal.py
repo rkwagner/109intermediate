@@ -14,14 +14,17 @@ import sys
 
 #Find possible palindromes in the input integer/string.
 def palindrome( in_string ):
-
-	return
+	for x in range( in_string[ 0 ] , in_string[ 1 ] + 1 ):
+		for y in range( in_string[ 2 ] , in_string[ 3 ] + 1 ):
+			if str( x * y ) == str( x * y )[ : : -1]:
+				print "{", x, ",", y, "}",
+	print ""
 
 try:
 	in_string = [ int( i ) for i in sys.argv[ 1 : ] ]
 	if len ( in_string ) != 4:
 		print 'Invalid Arg Length...'
 	else:
-		print 'Argument List: ', in_string
+		palindrome( in_string )
 except ValueError:
 	print'Invalid Args...'
