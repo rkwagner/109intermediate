@@ -26,5 +26,5 @@ try:
 		print 'Invalid Arg Length...'
 	else:
 		palindrome( in_string )
-except ValueError:
-	print'Invalid Args...'
+except ValueError as detail:
+	print detail
